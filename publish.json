@@ -1,0 +1,23 @@
+{
+    "name": "publish txt asset",
+    "steps": [
+        {
+            "log": "Clean everything",
+            "action": "clean"
+        },
+        {
+            "log": "Build the plugin",
+            "action": "build"
+        },
+        {
+            "action": "copy-files",
+            "files": [
+                "bin/Release/tm_txt.dll"
+            ],
+            "to-dir": "%TM_SDK_DIR%/bin/plugins",
+            "platforms": [
+                "windows"
+            ]
+        }
+    ]
+}

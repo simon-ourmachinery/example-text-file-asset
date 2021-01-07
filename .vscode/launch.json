@@ -1,0 +1,192 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Win64: the-machinery [Attach]",
+            "type": "cppvsdbg",
+            "request": "attach",
+            "processName": "the-machinery.exe",
+            "presentation": {
+                "group": "1-Common"
+            }
+        },
+        {
+            "name": "Win64: unit-test",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "bin/Debug/unit-test.exe",
+            "args": [
+                "-s"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "1-Common"
+            }
+        },
+        {
+            "name": "Win64: the-machinery",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "bin/Debug/the-machinery.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "2-Win64"
+            }
+        },
+        {
+            "name": "Win64: the-machinery [Release]",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "bin/Release/the-machinery.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "2-Win64"
+            }
+        },
+        {
+            "name": "Win64: epsilon-machine",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "bin/Debug/epsilon-machine.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "2-Win64"
+            }
+        },
+        {
+            "name": "Win64: simple-3d",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "bin/Debug/simple-3d.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "2-Win64"
+            }
+        },
+        {
+            "name": "Win64: simple-draw",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "bin/Debug/simple-draw.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "2-Win64"
+            }
+        },
+        {
+            "name": "OS X: unit-test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/Debug/unit-test",
+            "args": [
+                "--disable-job-system",
+                "-s"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "presentation": {
+                "group": "3-OS X"
+            }
+        },
+        {
+            "name": "Win64: tmbuild",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "bin/Debug/tmbuild.exe",
+            "args": [
+                "--project",
+                "tmbuild"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "2-Win64"
+            }
+        },
+        {
+            "name": "Linux: tmbuild",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/Debug/tmbuild",
+            "args": [
+                "--project",
+                "tmbuild"
+            ],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "stopAtEntry": true,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "4-Linux"
+            }
+        },
+        {
+            "name": "Linux: unit-test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/Debug/unit-test",
+            "args": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "stopAtEntry": true,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "presentation": {
+                "group": "4-Linux"
+            }
+        },
+        {
+            "name": "WSL: unit-test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/unit-test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "presentation": {
+                "group": "5-WSL"
+            }
+        }
+    ]
+}

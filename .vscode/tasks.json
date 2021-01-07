@@ -1,0 +1,147 @@
+{
+    "version": "2.0.0",
+    "type": "shell",
+    "problemMatcher": "$msCompile",
+    "tasks": [
+        {
+            "label": "tmbuild",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "${env:TM_SDK_DIR}\\bin\\tmbuild.exe"
+            },
+            "linux": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "osx": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "args": [
+                "--quiet"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "tmbuild-release",
+            "windows": {
+                "command": "${env:TM_SDK_DIR}\\bin\\tmbuild.exe"
+            },
+            "linux": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "osx": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "args": [
+                "-c",
+                "Release"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "tmbuild-clean",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "${env:TM_SDK_DIR}\\bin\\tmbuild.exe"
+            },
+            "linux": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "osx": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "args": [
+                "--quiet",
+                "--clean"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "tmbuild-clean-release",
+            "windows": {
+                "command": "${env:TM_SDK_DIR}\\bin\\tmbuild.exe"
+            },
+            "linux": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "osx": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "args": [
+                "--clean",
+                "-c",
+                "Release"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "tmbuild-publish",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "${env:TM_SDK_DIR}\\bin\\tmbuild.exe"
+            },
+            "linux": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "osx": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "args": [
+                "--package",
+                "publish.json"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "tmbuild-publish-debug",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "${env:TM_SDK_DIR}\\bin\\tmbuild.exe"
+            },
+            "linux": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "osx": {
+                "command": "./${env:TM_SDK_DIR}/bin/tmbuild"
+            },
+            "args": [
+                "--package",
+                "publish-debug.json"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "the-machinery",
+            "group": "test",
+            "type": "process",
+            "windows": {
+                "command": "${env:TM_SDK_DIR}\\bin\\the-machinery.exe"
+            }
+        }
+    ]
+}
